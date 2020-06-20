@@ -1,0 +1,11 @@
+var express = require('express');
+var router = express.Router();
+
+const MemberModifyMethod = require('../controllers/modify_controller');
+
+
+const MemberModify = new MemberModifyMethod();
+
+router.post('/',MemberModify.postRegister);
+
+module.exports = router;
